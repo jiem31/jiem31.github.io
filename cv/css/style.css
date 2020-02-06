@@ -4,7 +4,7 @@
 
 * {
     font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
-    color: #404040;
+    color: #263238;
     margin: 0;
     padding: 0;
 }
@@ -48,12 +48,12 @@ a:hover {
     grid-area: picture;
     display: flex;
     justify-content: center;
-    background-color: #FBCB07;
+    background-color: #FFC400;
 }
 #photo {
     height: 210px;
     margin: 65px 0 45px 0;
-    border: 5px solid #D5B614;
+    border: 5px solid #BCAAA4;
     border-radius: 50%;
 }
 
@@ -71,20 +71,20 @@ h1 {
     margin-top: 110px;
 }
 #firstname {
-    color: #FBCB07;
+    color: #FFC400;
 }
 #lastname {
     font-weight: 300;
-    color: #1A1A1A;
+    color: #212121;
 }
 h2 {
     font-size: 1.85rem;
-    color: #1A1A1A;
+    color: #212121;
 }
 
 #hr-small {
     width: 80px;
-    border-top: 3px solid #FBCB07;
+    border-top: 3px solid #FFC400;
 }
 
 /*
@@ -96,15 +96,15 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #FBCB07;
+    background-color: #FFC400;
 }
 aside h3 {
     font-size: 1.75rem;
     text-transform: uppercase;
     text-align: center;
     padding: 5px 0;
-    color: #FBCB07;
-    background-color: #404040;
+    color: #FFC400;
+    background-color: #263238;
 }
 #contact-details {
     padding: 25px 45px;
@@ -125,7 +125,7 @@ aside h3 {
     height: 48px;
     width: 64px;
     padding-top: 16px;
-    border: 2px solid #1A1A1A;
+    border: 2px solid #212121;
     border-radius: 50%;
     margin: 0 5px;
 }
@@ -143,10 +143,10 @@ main h3 {
     text-transform: uppercase;
 }
 main i {
-    color: #FBCB07;
+    color: #FFC400;
 }
 .hr-large {
-    border-top: 3px solid #FBCB07;
+    border-top: 3px solid #FFC400;
     margin-bottom: 20px;
 }
 article {
@@ -234,18 +234,18 @@ article i {
         height: 50%;
     }
     header {
-        background-color: #FBCB07;
+        background-color: #FFC400;
         text-align: center;
     }
    h1 {
         margin-top: 10px;
    }
    #firstname, #lastname{
-        color: #1A1A1A;
+        color: #212121;
         font-size: 75%;
     }
     h2 {
-        color: #1A1A1A;
+        color: #212121;
         margin-bottom: 20px;
     }
     main {
