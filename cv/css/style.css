@@ -1,0 +1,260 @@
+/*
+    GENERAL
+*/
+
+* {
+    font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
+    color: #263238;
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+}
+p {
+    padding: 3px 0;
+}
+li {
+    list-style-type: square;
+    margin-left: 16px;
+}
+a {
+    text-decoration: none
+}
+
+a:hover {
+    font-size: bold;
+    text-decoration: underline;
+}
+
+/*
+    PAGE
+*/
+
+#page {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-template-areas: 
+        "picture header"
+        "aside main";
+    grid-column-gap: 65px;
+}
+
+/*
+    PAGE - PICTURE AREA
+*/
+
+#picture {
+    grid-area: picture;
+    display: flex;
+    justify-content: center;
+    background-color: #FFC400;
+}
+#photo {
+    height: 210px;
+    margin: 65px 0 45px 0;
+    border: 5px solid #F57C00;
+    border-radius: 50%;
+}
+
+/*
+    PAGE - HEADER AREA
+*/
+
+header {
+    grid-area: header;
+}
+h1 {
+    font-size: 3.90rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 110px;
+}
+#firstname {
+    color: #FFC400;
+}
+#lastname {
+    font-weight: 300;
+    color: #212121;
+}
+h2 {
+    font-size: 1.85rem;
+    color: #212121;
+}
+
+#hr-small {
+    width: 80px;
+    border-top: 3px solid #FFC400;
+}
+
+/*
+    PAGE - ASIDE AREA
+*/
+
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #FFC400;
+}
+aside h3 {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 0;
+    color: #FFC400;
+    background-color: #263238;
+}
+#contact-details {
+    padding: 25px 45px;
+}
+#about-me-details {
+    padding: 25px 45px;
+    text-align: justify;
+}
+#hobbies {
+    margin-top: auto; /* Align bottom */
+}
+#hobbies-details {
+    text-align: center;
+    margin: 40px 0;
+}
+#hobbies-details i {
+    font-size: 2rem;
+    height: 48px;
+    width: 64px;
+    padding-top: 16px;
+    border: 2px solid #212121;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/*
+    PAGE - MAIN AREA
+*/
+
+main {
+    grid-area: main;
+    margin-right: 65px;
+}
+main h3 {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+}
+main i {
+    color: #FFC400;
+}
+.hr-large {
+    border-top: 3px solid #FFC400;
+    margin-bottom: 20px;
+}
+article {
+    margin: 20px 0;
+    margin-bottom: 10px;
+}
+article i {
+    margin-right: 20px;
+}
+.education-details, .experience-details {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    grid-template-areas: 
+        "left right";
+    grid-column-gap: 30px;
+    margin: 30px 0;
+}
+.recommandations-details {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    grid-template-areas: 
+        "left right";
+    grid-column-gap: 30px;
+}
+.left {
+    grid-area: left;
+}
+.right {
+    grid-area: right;
+}
+.title {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.subtitle {
+    font-weight: 500;
+}
+.manager {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+/* 
+    MEDIA QUERIES FOR RESPONSIVENESS :
+    ---+--------+--------+------------
+    xs |    0px |  575px | Smartphones (portrait)
+    sm |  576px |  767px | Smartphones (landscape)
+    md |  768px |  991px | Tablets
+    lg |  992px | 1199px | Small screens
+    xl | 1200px |    +px | Large screens, TV etc...
+*/
+
+@media screen and (max-width: 1199px) {
+    .education-details, .experience-details {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        grid-template-areas:
+            "left right";
+    }
+}
+@media screen and (max-width: 991px) {
+    #page {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        grid-template-areas: 
+            "picture header"
+            "aside main";
+        grid-column-gap: 65px;
+    }
+    .education-details, .experience-details, .recommandations-details {
+        display: flex;
+        flex-direction: column;
+    }
+    .education-details .right, .experience-details .right {
+        margin-left : 40px;
+    }
+}
+@media screen and (max-width: 767px) {
+    #page {
+        display: flex;
+        flex-direction: column;
+    }
+    #photo {
+        width: 50%;
+        height: 50%;
+    }
+    header {
+        background-color: #FFC400;
+        text-align: center;
+    }
+   h1 {
+        margin-top: 10px;
+   }
+   #firstname, #lastname{
+        color: #212121;
+        font-size: 75%;
+    }
+    h2 {
+        color: #212121;
+        margin-bottom: 20px;
+    }
+    main {
+        margin-left: 40px;
+    }
+    .recommandations-details {
+        margin-left:40px;
+    }
+    .recommandations-details .left,.recommandations-details .right {
+        margin-bottom:40px;
+    }
+}
